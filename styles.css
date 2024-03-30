@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+/* font-family: 'Open Sans',
+sans-serif;
+font-family: 'Poppins',
+sans-serif; */
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --SoftMagenta: hsl(300, 69%, 71%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  background-color: var(--Violet);
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+  background-image: url(images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-content: center;
+  padding: 0.5rem;
+}
+
+.container {
+  max-width: 1300px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+header img { 
+  width: 250px;
+}
+
+main {
+  display: flex;
+  gap: 2rem;
+  
+}
+
+section {
+  flex: 1;
+}
+.illustration img {
+  width: 100%;
+}
+
+.text {
+  padding: 2rem 2.5rem;
+}
+.text h1 {
+  font-size: 2.75rem;
+  font-family:  'Poppins', sans-serif;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.text p {
+  color: white;
+  font-size: 1.275rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.text button {
+  cursor: pointer;
+  color: var(--Violet);
+  background-color: white;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.175rem;
+  padding: 1rem 3.5rem;
+  transition: color 0.15s, background-color 0.15s;
+  box-shadow: 2px 6px 4px rgba(0, 0, 0, 0.3);
+}
+
+.text button:hover {
+  color: white;
+  background-color: var(--SoftMagenta);
+}
+
+.links {
+  display: flex;
+  justify-content: right; 
+}
+
+.links :not(:first-child) {
+  margin-left: 1rem;
+}
+
+.link-container {
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  transition: border 0.15s, color 0.15s ;
+}
+
+
+.link-container:hover {
+  border: 1px solid var(--SoftMagenta);
+  color: var(--SoftMagenta);
+}
+
+.link-container a {
+  color: white;
+  font-size: 1.1rem;
+  transition: color 0.15s ;
+}
+
+.link-container a:hover {
+  color: var(--SoftMagenta);
+  
+}
+
+i {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  main {
+    gap: 1rem;
+  }
+  .text {
+    padding: 1rem 2rem;
+    border: 1px solid yellow;
+  }
+  .text h1 {
+    font-size: 2.25rem;
+  }
+  .text p {
+    line-height: 1.4;
+    font-size: 1.1rem;
+  }
+ 
+  .links {
+    justify-content: center;
+  }
+}
+@media (max-width: 975px) {
+  body {
+    background-image: url(images/bg-mobile.svg);
+    background-size: contain;
+  }
+  .container {
+    gap: 2rem;
+  }
+  main {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+ section {
+  padding: 2rem;
+ }
+
+ .text h1 {
+  font-size: 1.475rem
+ }
+
+ .text button {
+  font-size: 1.1rem;
+ }
+}
+
+.attribution { color: white; font-size: 14px; text-align: center; margin-top: 1rem; }
+.attribution a { color: hsl(228, 45%, 44%); }
